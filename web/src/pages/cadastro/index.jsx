@@ -178,19 +178,3 @@ export function Cadastro() {
         </Flex>
     );
 }
-
-{
-    /* <RadioGroup
-    onChange={setValue}
-    value={value}
->
-    <Stack direction="row" {...field}>
-        <Radio value="Masculino">
-            Masculino
-        </Radio>
-        <Radio value="Feminino">
-            Feminino
-        </Radio>
-    </Stack>
-</RadioGroup> */
-}
