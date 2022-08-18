@@ -49,12 +49,13 @@ export function Cadastro() {
                         password: "",
                     }}
                     validationSchema={Yup.object().shape({
-                        nome: Yup.string().min(6).required("a"),
+                        nome: Yup.string().min(6).required(),
                         email: Yup.string().email().required(),
                         sexo: Yup.string().required(),
                         password: Yup.string().min(6).required(),
                     })}
                     onSubmit={async (values) => {
+                        console.log("valores", values);
                         await api.post(
                             "http://localhost:3333/registrar",
                             values
@@ -101,12 +102,12 @@ export function Cadastro() {
                             </Field>
                             <Field name="sexo">
                                 {({ field, form }) => (
-                                    <FormControl>
+                                    <FormControl {...field}>
                                         <FormLabel></FormLabel>
                                         <RadioGroup
-                                            name="sexo"
                                             onChange={setValue}
                                             value={value}
+                                            name="sexo"
                                         >
                                             <Stack direction="row">
                                                 <Radio value="Masculino">
