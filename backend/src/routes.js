@@ -9,7 +9,7 @@ routes.post('/registrar', Cadastro.post);
 routes.get('/listartodos', Cadastro.listarTodos);
 routes.delete('/deletartodos', Cadastro.deletarTodos);
 routes.post('/login', Login.login);
-routes.get('/pokemon', Menu.get);
+routes.get('/listarpokemon', Menu.get);
 
 // routes.get("/", (req, res) => {
 //     return res.json({
