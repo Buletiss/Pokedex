@@ -12,7 +12,7 @@ module.exports = {
         return filter;
       });
 
-      return res.json(response);
+      return res.json(allpokemon);
     } catch {
       return res.status(400).send('message: error');
     }
