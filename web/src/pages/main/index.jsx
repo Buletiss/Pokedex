@@ -7,7 +7,6 @@ export function Main() {
     <>
       <Flex>
         <Sidebar />
-        <Text>a</Text>
       </Flex>
     </>
   );
