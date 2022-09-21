@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Flex } from '@chakra-ui/react';
 import api from 'axios';
 
 export function Sidebar() {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState(['']);
 
   useEffect(() => {
     async function personagens() {
@@ -12,13 +11,13 @@ export function Sidebar() {
       setPokemons(response.data);
     }
     personagens();
-  });
+  }, []);
 
   return (
     <>
       <div className="pokemons-div">
-        {pokemons.map(pokemon => (
-          <div>
+        {pokemons.map((pokemon, id) => (
+          <div key={id}>
             <p>{pokemon.name}</p>
           </div>
         ))}
